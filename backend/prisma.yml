@@ -1,0 +1,8 @@
+#endpoint: ${env:PRISMA_ENDPOINT}
+#endpoint: https://us1.prisma.sh/chris-honda-fce19a//dev
+endpoint: https://us1.prisma.sh/chris-honda-fce19a/backend/dev
+datamodel: datamodel.prisma
+# secret: ${env:PRISMA_SECRET}
+hooks:
+  post-deploy:
+    - graphql get-schema -p prisma
